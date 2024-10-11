@@ -60,19 +60,24 @@ view: order_items {
     drill_fields: [detail*]
   }
 
+  measure: sum {
+    type: sum
+    drill_fields: [detail*]
+  }
+
   # ----- Sets of fields for drilling ------
   set: detail {
     fields: [
-	id,
-	users.last_name,
-	users.id,
-	users.first_name,
-	inventory_items.id,
-	inventory_items.product_name,
-	products.name,
-	products.id,
-	orders.order_id
-	]
+  id,
+  users.last_name,
+  users.id,
+  users.first_name,
+  inventory_items.id,
+  inventory_items.product_name,
+  products.name,
+  products.id,
+  orders.order_id
+  ]
   }
 
 }
