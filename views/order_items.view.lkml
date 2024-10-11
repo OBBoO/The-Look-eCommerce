@@ -60,8 +60,9 @@ view: order_items {
     drill_fields: [detail*]
   }
 
-  measure: sum {
+  measure: sale_price_sum {
     type: sum
+    sql: ${sale_price} ;;
     drill_fields: [detail*]
   }
 
